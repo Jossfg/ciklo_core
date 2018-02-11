@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const RolSchema = new Schema({
     nombre: String,
-    descripcion: String
+    descripcion: String,
+    activo: Boolean
 },
 {
     timestamps: {

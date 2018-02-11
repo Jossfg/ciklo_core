@@ -20,6 +20,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.post('/signin', authCtrl);
-app.use('/api', api);
+app.use('/api', auth, api);
 
 module.exports = app;

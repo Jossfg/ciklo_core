@@ -7,7 +7,8 @@ const VehiculoSchema = new Schema({
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'usuario'
-    }
+    },
+    activo: Boolean
 },
 {
     timestamps: {

@@ -1,13 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('lista log');
-});
+var logController = require('../controllers/log.controller');
 
-router.get('/:id', function(req, res, next) {
-  res.send(req.params.id);
-});
+router.get('/', logController.findAll);
+router.get('/:id', logController.findOne);
 
 module.exports = router;

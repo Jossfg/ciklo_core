@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('lista vehiculos');
-});
+var vehiculo = require('../models/vehiculo');
 
-router.get('/:id', function(req, res, next) {
-  res.send(req.params.id);
-});
+var vehiculoController = require('../controllers/vehiculo.controller');
+
+router.post('/', vehiculoController.create);
+router.get('/', vehiculoController.findAll);
+router.get('/:id', vehiculoController.findOne);
+router.put('/:id', vehiculoController.update);
 
 module.exports = router;

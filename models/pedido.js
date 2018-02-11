@@ -7,15 +7,15 @@ const PedidoSchema = new Schema({
     paquetes: [
         {
             nombre: String,
-            peso: Double,
-            imagen: String
+            peso: Number
         }
     ],
     vehiculo: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'vehiculo'
     },
-    total: Double
+    estado: Boolean,
+    total: Number
 },
 {
     timestamps: {

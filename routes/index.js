@@ -7,7 +7,6 @@ var vehiculo = require('./vehiculo');
 var pedido = require('./pedido');
 var log = require('./log');
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.send("Home");
 });

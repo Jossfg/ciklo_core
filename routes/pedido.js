@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('lista pedidos');
-});
+var pedidoController = require('../controllers/pedido.controller');
 
-router.get('/:id', function(req, res, next) {
-  res.send(req.params.id);
-});
+router.post('/', pedidoController.create);
+router.get('/', pedidoController.findAll);
+router.get('/:id', pedidoController.findOne);
+router.put('/:id', pedidoController.update);
+router.delete('/:id', pedidoController.delete);
+router.post('/:id/paquetes', pedidoController.addPaquetes)
 
 module.exports = router;

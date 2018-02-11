@@ -6,11 +6,11 @@ const UsuarioSchema = new Schema({
     correo: String,
     telefono: Number,
     direccion: String,
-    activo: Boolean,
     rol: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'rol'
-    }
+    },
+    activo: Boolean
 },
 {
     timestamps: {
