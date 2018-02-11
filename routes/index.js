@@ -1,12 +1,21 @@
 var express = require('express');
 var router = express.Router();
-var users = require('./users');
+
+var rol = require('./rol');
+var usuario = require('./usuario');
+var vehiculo = require('./vehiculo');
+var pedido = require('./pedido');
+var log = require('./log');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.send("Home");
 });
 
-router.use('/usuario', users);
+router.use('/rol', rol);
+router.use('/usuario', usuario);
+router.use('/vehiculo', vehiculo);
+router.use('/pedido', pedido);
+router.use('/log', log);
 
 module.exports = router;
